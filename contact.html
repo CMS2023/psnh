@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontaktformular</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <img class="banner" src="./PSNH.png" alt="Banner Poetry Slam" />
+    <div id="navbar">
+      <div id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    <nav class="sliding-menu" id="sliding-menu">
+      <div class="image-container" id="image-container">
+        <a href="index.html">Startseite</a>
+      </div>
+      <div class="image-container">
+        <a href="slams.html">Slams</a>
+      </div>
+      <div class="image-container">
+        <a href="calendar.html">Terminkalender</a>
+      </div>
+      <div class="image-container">
+        <a href="workshops.html">Workshops</a>
+      </div>
+      <div class="image-container">
+        <a href="awareness.html">Awareness</a>
+      </div>
+      <div class="image-container">
+        <a class="active" href="contact.html">Kontakt</a>
+      </div>
+      <div class="image-container">
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </nav>
+    <hr />
+    <main>
+      <h1>Kontakt</h1>
+      <div class="form-container">
+        <p>
+          Wenn du dich für eine bestimmte Veranstaltung interessierst, melde
+          dich gerne <a href="./slams.html">hier</a>. Bei allgemeinen Anfragen,
+          nutze bitte unser Kontaktformular.
+        </p>
+
+        <form action="submit-form-endpoint" method="post">
+          <label for="vorname">Vorname</label>
+          <input type="text" id="vorname" name="vorname" required /><br />
+
+          <label for="nachname">Nachname</label>
+          <input type="text" id="nachname" name="nachname" /><br />
+
+          <label for="email">E-Mail (Pflichtfeld)</label>
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="interesse">Mein Interesse:</label>
+          <select id="interesse" name="interesse">
+            <option value="buchung">Buchung</option>
+            <option value="teilnahme">Teilnahme</option>
+            <option value="workshop">Workshop/Slam-Sonstiges</option></select
+          ><br />
+
+          <label for="nachricht">Meine Nachricht:</label>
+          <textarea id="nachricht" name="nachricht" rows="4"></textarea>
+
+          <div class="datenschutz">
+            <input
+              type="checkbox"
+              id="datenschutz"
+              name="datenschutz"
+              required
+            />
+            <label for="datenschutz">Ich erkläre mich einverstanden...</label>
+          </div>
+
+          <button type="submit">Senden</button>
+        </form>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -3,22 +3,16 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: #FDFFE4;
+}
 .banner {
   width: 100%;
   height: 10rem;
 }
 nav {
   width: 100%;
-  padding: 2rem 5rem;
-}
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-nav ul li {
-  padding: 0.625rem;
-  border: 1px solid black;
+  padding: 2rem 1rem; 
 }
 nav a {
   text-decoration: none; 
@@ -26,12 +20,14 @@ nav a {
   padding: 0.5rem;
 }
 nav a:hover {
-  color: grey;
+  color: #A40C0C;
 }
 hr {
   margin: 0.5rem 0;
 }
-
+h1 {
+  text-align: center;
+}
 main>div {
   border: 1px solid black;
   width: 80%;
@@ -45,9 +41,192 @@ main>img {
   width: 80%;
   height: 15rem;
 }
+/*Navbar*/
+nav.show {
+  display: block;
+}
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff; 
+  margin: 4px 0;
+}
+#navbar {
+  display: block;
+  background-color: #333;
+  text-align: right;
+  /* padding: 15px; */
+  padding: 0.9375rem; /* 15px / 16px = 0.9375rem, gerundet auf 0.94rem */
+}
+.image-container {
+  border: 1px solid black;
+  padding: 1rem;
+  background-color: #D5F6F7;
+  text-align: center;
+}
+#menu-toggle {
+  display: block; 
+  cursor: pointer;
+}
+.sliding-menu {
+  display: none;
+}
+nav.show {
+  display: block;
+}
 
-@media (max-width: 768px) {
-  nav {
-    padding: 2rem 1rem; 
+/*Unsere Slams*/
+.event {
+  flex-direction: column;
+}
+
+.event-image {
+  width: 80%; /* Passt die Breite des Bildes an den Container an */
+  height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+  /* object-fit: cover; kann auskommentiert bleiben, falls das Bild nicht beschnitten werden soll */
+}
+
+.event-content {
+  padding: 1rem 0;
+}
+
+/*Workshops*/
+.event-section {
+  margin-bottom: 15px; /* Abstand zwischen den Sektionen */
+}
+
+.section-title {
+  text-align: center; /* Zentriert den Titel über der Box */
+  margin-bottom: 10px; /* Abstand zum Inhaltscontainer */
+}
+
+.section-content {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 15px; /* Padding innerhalb der Box */
+  /* Um die Box zu zentrieren, wenn sie nicht 100% Breite einnimmt */
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Contact*/
+.form-container {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  max-width: 100%;
+  margin: 10px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px; /* Abstand zwischen Label und Eingabefeld */
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.datenschutz {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/*SP-Tauglichkeit*/
+@media (min-width: 768px) {
+/*Startseite*/
+  .sliding-menu {
+    display: flex;
+    justify-content: center;
+  }
+  .image-container {
+    margin: 0 2rem;
+  }
+  #navbar {
+    display: none;
+  }
+  #menu-toggle {
+    display: none;
+  }
+
+  /*Unsere Slams*/
+  .event {
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .event-image {
+    width: 27rem; 
+    height: 18rem;
+    /*object-fit: cover;  Damit das Bild die Box ausfüllt ohne verzerrt zu werden */
+  }
+  .event-content {
+    padding: 1rem;
+  }
+
+  /*Workshops*/
+  .section-content {
+    /* Vergrößern Sie das border-radius und box-shadow nach Bedarf */
+    width: 80%; /* Oder die gewünschte maximale Breite */
+    /* Restliche Stile bleiben gleich */
+  }
+  /*Contact Formular*/
+  .form-container {
+    padding: 20px;
+    max-width: 600px; /* Begrenzte Breite für größere Bildschirme */
+  }
+
+  form {
+    max-width: 500px; /* Optional: Begrenzung der Formularbreite */
+    margin: auto; /* Zentriert das Formular */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    padding: 15px; /* Größeres Padding in den Eingabefeldern */
+  }
+
+  button {
+    padding: 15px 30px; /* Größerer Button für leichtere Klickbarkeit */
+  }
+
+  .datenschutz label {
+    font-size: 0.9rem; /* Anpassung der Schriftgröße, falls nötig */
   }
 }
