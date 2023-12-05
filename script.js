@@ -1,4 +1,3 @@
-//Smartphone-Menü
 document.getElementById('menu-toggle').addEventListener('click', function() {
   var bars = document.querySelectorAll('.bar');
   for (var i = 0; i < bars.length; i++) {

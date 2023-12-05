@@ -41,7 +41,6 @@ main>img {
   width: 80%;
   height: 15rem;
 }
-/*Navbar*/
 nav.show {
   display: block;
 }
@@ -53,10 +52,9 @@ nav.show {
 }
 #navbar {
   display: block;
-  background-color: #333;
+  background-color: #b90b0b4d ;
   text-align: right;
-  /* padding: 15px; */
-  padding: 0.9375rem; /* 15px / 16px = 0.9375rem, gerundet auf 0.94rem */
+  padding: 0.9375rem;
 }
 .image-container {
   border: 1px solid black;
@@ -75,41 +73,102 @@ nav.show {
   display: block;
 }
 
-/*Unsere Slams*/
+.calendar-list {
+  margin: 0;
+  padding: 0;
+}
+
+.calendar-event {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  border-left: 5px solid #ff1493;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-date {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.calendar-details h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.calendar-details p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.calendar-details a {
+  font-size: 1rem;
+  color: #0000ff;
+  text-decoration: none;
+}
+
+.calendar-image img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
 .event {
   flex-direction: column;
 }
 
 .event-image {
-  width: 80%; /* Passt die Breite des Bildes an den Container an */
-  height: auto; /* Behält das Seitenverhältnis des Bildes bei */
-  /* object-fit: cover; kann auskommentiert bleiben, falls das Bild nicht beschnitten werden soll */
+  width: 80%;
+  height: auto;
 }
 
 .event-content {
   padding: 1rem 0;
 }
 
-/*Workshops*/
-.event-section {
-  margin-bottom: 15px; /* Abstand zwischen den Sektionen */
-}
-
-.section-title {
-  text-align: center; /* Zentriert den Titel über der Box */
-  margin-bottom: 10px; /* Abstand zum Inhaltscontainer */
-}
-
-.section-content {
-  background-color: #ffffff;
+.intro, .target-group, .schedule, .instructors, .costs, .contact {
+  background-color: #D5F6F7;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  padding: 15px; /* Padding innerhalb der Box */
-  /* Um die Box zu zentrieren, wenn sie nicht 100% Breite einnimmt */
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 15px;
+  padding: 10px;
 }
-/*Contact*/
+
+.intro {
+  margin-top: 1rem;
+}
+
+.modules, .profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.module, .profile {
+  margin-bottom: 10px;
+}
+
+.module {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.profile img {
+  width: 80px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.profile p {
+  margin: 0;
+}
 .form-container {
   background-color: #ffffff;
   padding: 10px;
@@ -126,7 +185,7 @@ form {
 
 label {
   margin-top: 10px;
-  margin-bottom: 5px; /* Abstand zwischen Label und Eingabefeld */
+  margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -164,9 +223,7 @@ button:hover {
   align-items: center;
 }
 
-/*SP-Tauglichkeit*/
 @media (min-width: 768px) {
-/*Startseite*/
   .sliding-menu {
     display: flex;
     justify-content: center;
@@ -181,7 +238,31 @@ button:hover {
     display: none;
   }
 
-  /*Unsere Slams*/
+  .calendar-list {
+    margin: 0 auto;
+  }
+
+  .calendar-event {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .calendar-date {
+      flex-direction: column;
+      align-items: center;
+      font-size: 2rem;
+  }
+
+  .calendar-details {
+      flex-grow: 1;
+      padding: 0 20px;
+  }
+
+  .calendar-image {
+      flex-basis: 250px;
+  }
+
   .event {
     border: 1px solid #ccc;
     display: flex;
@@ -192,41 +273,57 @@ button:hover {
   .event-image {
     width: 27rem; 
     height: 18rem;
-    /*object-fit: cover;  Damit das Bild die Box ausfüllt ohne verzerrt zu werden */
   }
   .event-content {
     padding: 1rem;
   }
 
-  /*Workshops*/
-  .section-content {
-    /* Vergrößern Sie das border-radius und box-shadow nach Bedarf */
-    width: 80%; /* Oder die gewünschte maximale Breite */
-    /* Restliche Stile bleiben gleich */
+  .intro, .target-group, .schedule, .instructors, .costs, .contact {
+    padding: 20px;
+    margin-bottom: 20px;
   }
-  /*Contact Formular*/
+
+  .modules {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .module {
+      width: 48%;
+  }
+
+  .profile {
+      flex-direction: row;
+      align-items: center;
+  }
+
+  .profile img {
+      width: 100px;
+      margin-right: 20px;
+  }
   .form-container {
     padding: 20px;
-    max-width: 600px; /* Begrenzte Breite für größere Bildschirme */
+    max-width: 600px;
   }
 
   form {
-    max-width: 500px; /* Optional: Begrenzung der Formularbreite */
-    margin: auto; /* Zentriert das Formular */
+    max-width: 500px;
+    margin: auto;
   }
 
   input[type="text"],
   input[type="email"],
   select,
   textarea {
-    padding: 15px; /* Größeres Padding in den Eingabefeldern */
+    padding: 15px;
   }
 
   button {
-    padding: 15px 30px; /* Größerer Button für leichtere Klickbarkeit */
+    padding: 15px 30px;
   }
 
   .datenschutz label {
-    font-size: 0.9rem; /* Anpassung der Schriftgröße, falls nötig */
+    font-size: 0.9rem;
   }
 }
