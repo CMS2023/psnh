@@ -228,6 +228,10 @@ button:hover {
     display: flex;
     justify-content: center;
   }
+  #sliding-menu {
+    display: flex;
+    justify-content: center;  
+  }
   .image-container {
     margin: 0 2rem;
   }
