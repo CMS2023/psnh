@@ -279,8 +279,9 @@ button:hover {
   }
 
   .intro, .target-group, .schedule, .instructors, .costs, .contact {
-    padding: 20px;
-    margin-bottom: 20px;
+    width: 80%;
+    margin: 0 auto 1.25rem;
+    padding: 1.25rem;
   }
 
   .modules {
