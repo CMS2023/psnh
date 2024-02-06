@@ -3,13 +3,29 @@
   margin: 0;
   padding: 0;
 }
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+/* Fonts */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
 body {
+  font-family: 'Garamond', 'Georgia', serif;
+  font-size: 1.6rem;
+}
+nav, button {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+header, main, footer {
   background-color: #FDFFE4;
 }
 .banner {
   width: 100%;
   height: 10rem;
 }
+/*Navbar*/
 nav {
   width: 100%;
   padding: 2rem 1rem; 
@@ -22,17 +38,29 @@ nav a {
 nav a:hover {
   color: #A40C0C;
 }
-hr {
-  margin: 0.5rem 0;
-}
+/* Main */
 h1 {
   text-align: center;
+  padding-top: 1rem;
 }
-main>div {
+.margin-p {
+  margin-bottom: 2rem;
+}
+ul {
+  list-style-type: disc;
+}
+li {
+  padding: 0.5rem 0;
+}
+.enger {
+  width: 90%;
+  margin: 0 auto;
+}
+main>section {
   border: 1px solid black;
   width: 80%;
   margin: 1rem auto;
-  padding: 5rem 0;
+  padding: 1.5rem;
   text-align: center;
 }
 main>img {
@@ -69,10 +97,42 @@ nav.show {
 .sliding-menu {
   display: none;
 }
-nav.show {
-  display: block;
+
+/* Timeline */
+.timeline {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+.timeline ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.timeline li {
+  background-color: #ffffff;
+  border-left: 4px solid #e8491d;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 4px solid #e8491d;
+}
+
+.timeline time {
+  font-weight: bold;
+  color: #e8491d;
+}
+
+/*Calender*/
 .calendar-list {
   margin: 0;
   padding: 0;
@@ -81,7 +141,7 @@ nav.show {
 .calendar-event {
   background-color: #ffffff;
   margin-bottom: 20px;
-  border-left: 5px solid #ff1493;
+  border-left: 5px solid #ff1493; /* Farbakzent */
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -112,25 +172,29 @@ nav.show {
 }
 
 .calendar-image img {
-  width: 100%;
+  width: 100%; /* Stellt sicher, dass das Bild responsiv ist */
   height: auto;
   margin-top: 10px;
 }
 
+/*Slams*/
 .event {
   flex-direction: column;
 }
 
 .event-image {
-  width: 80%;
-  height: auto;
+  width: 80%; /* Passt die Breite des Bildes an den Container an */
+  height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+  /* object-fit: cover; kann auskommentiert bleiben, falls das Bild nicht beschnitten werden soll */
 }
 
 .event-content {
   padding: 1rem 0;
 }
 
+/*Workshops*/
 .intro, .target-group, .schedule, .instructors, .costs, .contact {
+  /* background-color: #ffffff; */
   background-color: #D5F6F7;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -157,18 +221,20 @@ nav.show {
 }
 
 h2 {
+  color: #333;
   margin-bottom: 1rem;
 }
 
 .profile img {
-  width: 80px;
+  width: 80px; /* Angepasste Größe für mobile Geräte */
   margin-bottom: 10px;
-  border-radius: 50%;
+  border-radius: 50%; /* Kreisförmiges Bild */
 }
 
 .profile p {
   margin: 0;
 }
+/*Contact*/
 .form-container {
   background-color: #ffffff;
   padding: 10px;
@@ -185,7 +251,7 @@ form {
 
 label {
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* Abstand zwischen Label und Eingabefeld */
 }
 
 input[type="text"],
@@ -223,17 +289,91 @@ button:hover {
   align-items: center;
 }
 
+/* Impressum */
+address {
+  font-style: normal;
+}
+
+.disclaimer {
+  margin-top: 20px;
+}
+
+.disclaimer p {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem; /* entspricht 20px */
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1rem; /* entspricht 10px */
+}
+
+.social-icons {
+  margin: 1rem 0; /* entspricht 10px oben und unten */
+}
+
+.social-icons a img {
+  width: 2.4rem; /* entspricht 24px */
+  height: 2.4rem; /* entspricht 24px */
+  margin: 0 1rem; /* entspricht 10px rechts und links */
+}
+
+#scrollTopButton {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  position: absolute;
+  right: 2rem; 
+  bottom: 2rem; 
+  background: #1b4e9a; 
+  border: none;
+  border-radius: 50%;
+  width: 4rem; 
+  height: 4rem; 
+  cursor: pointer;
+  padding: 0;
+}
+
+
+/*Desktop-Tauglichkeit*/
 @media (min-width: 768px) {
+  header, main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+/*Startseite*/
   .sliding-menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   #sliding-menu {
     display: flex;
     justify-content: center;  
   }
   .image-container {
-    margin: 0 2rem;
+    margin: 0 1rem;
+    flex: 1 1 auto;
+    min-width: 100px;
+  }
+  .sliding-menu .image-container {
+    margin-bottom: 5px;
+    margin-top: 5px; 
   }
   #navbar {
     display: none;
@@ -241,7 +381,13 @@ button:hover {
   #menu-toggle {
     display: none;
   }
+  /* Timeline */
 
+  .timeline li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  /*Calender*/
   .calendar-list {
     margin: 0 auto;
   }
@@ -264,9 +410,10 @@ button:hover {
   }
 
   .calendar-image {
-      flex-basis: 250px;
+      flex-basis: 250px; /* Anpassung der Bildgröße auf Desktop */
   }
 
+  /*Slams*/
   .event {
     border: 1px solid #ccc;
     display: flex;
@@ -277,58 +424,63 @@ button:hover {
   .event-image {
     width: 27rem; 
     height: 18rem;
+    /*object-fit: cover;  Damit das Bild die Box ausfüllt ohne verzerrt zu werden */
   }
   .event-content {
     padding: 1rem;
   }
 
+  /*Workshops*/
   .intro, .target-group, .schedule, .instructors, .costs, .contact {
     width: 80%;
     margin: 0 auto 1.25rem;
     padding: 1.25rem;
   }
-
   .modules {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
   }
-
   .module {
-      width: 48%;
+      width: 48%; /* Zwei Spalten Layout */
   }
-
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
   .profile {
       flex-direction: row;
       align-items: center;
   }
-
   .profile img {
-      width: 100px;
+      width: 100px; /* Größere Bilder für Desktop */
       margin-right: 20px;
   }
+
+  /*Contact Formular*/
   .form-container {
     padding: 20px;
-    max-width: 600px;
+    max-width: 600px; /* Begrenzte Breite für größere Bildschirme */
   }
 
   form {
-    max-width: 500px;
-    margin: auto;
+    max-width: 500px; /* Optional: Begrenzung der Formularbreite */
+    margin: auto; /* Zentriert das Formular */
   }
 
   input[type="text"],
   input[type="email"],
   select,
   textarea {
-    padding: 15px;
+    padding: 15px; /* Größeres Padding in den Eingabefeldern */
   }
 
   button {
-    padding: 15px 30px;
+    padding: 15px 30px; /* Größerer Button für leichtere Klickbarkeit */
   }
 
   .datenschutz label {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Anpassung der Schriftgröße, falls nötig */
   }
 }
