@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontaktformular</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
 
-  <body>
-    <img class="banner" src="./PSNH.png" alt="Banner Poetry Slam" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontaktformular</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <img class="banner" src="img/logos/PSNH.png" alt="Banner Poetry Slam" />
     <div id="navbar">
       <div id="menu-toggle">
         <div class="bar"></div>
@@ -24,7 +26,7 @@
         <a href="slams.html">Slams</a>
       </div>
       <div class="image-container">
-        <a href="calendar.html">Terminkalender</a>
+        <a href="calendar.html">Kalender</a>
       </div>
       <div class="image-container">
         <a href="workshops.html">Workshops</a>
@@ -40,49 +42,61 @@
       </div>
     </nav>
     <hr />
-    <main>
-      <h1>Kontakt</h1>
-      <div class="form-container">
-        <p>
-          Wenn du dich für eine bestimmte Veranstaltung interessierst, melde
-          dich gerne <a href="./slams.html">hier</a>. Bei allgemeinen Anfragen,
-          nutze bitte unser Kontaktformular.
-        </p>
+  </header>
+  <main>
+    <h1>Kontakt</h1>
+    <div class="form-container">
+      <p>
+        Wenn du dich für eine bestimmte Veranstaltung interessierst, melde
+        dich gerne <a href="slams.html">hier</a>. Bei allgemeinen Anfragen,
+        nutze bitte unser Kontaktformular.
+      </p>
 
-        <form action="submit-form-endpoint" method="post">
-          <label for="vorname">Vorname</label>
-          <input type="text" id="vorname" name="vorname" required /><br />
+      <form action="submit-form-endpoint" method="post">
+        <label for="vorname">Vorname</label>
+        <input type="text" id="vorname" name="vorname" required /><br />
 
-          <label for="nachname">Nachname</label>
-          <input type="text" id="nachname" name="nachname" /><br />
+        <label for="nachname">Nachname</label>
+        <input type="text" id="nachname" name="nachname" /><br />
 
-          <label for="email">E-Mail (Pflichtfeld)</label>
-          <input type="email" id="email" name="email" required /><br />
+        <label for="email">E-Mail (Pflichtfeld)</label>
+        <input type="email" id="email" name="email" required /><br />
 
-          <label for="interesse">Mein Interesse:</label>
-          <select id="interesse" name="interesse">
-            <option value="buchung">Buchung</option>
-            <option value="teilnahme">Teilnahme</option>
-            <option value="workshop">Workshop/Slam-Sonstiges</option></select
-          ><br />
+        <label for="interesse">Mein Interesse:</label>
+        <select id="interesse" name="interesse">
+          <option value="buchung">Buchung</option>
+          <option value="teilnahme">Teilnahme (Workshop/Slam)</option>
+          <option value="workshop">Sonstiges</option>
+        </select><br />
 
-          <label for="nachricht">Meine Nachricht:</label>
-          <textarea id="nachricht" name="nachricht" rows="4"></textarea>
+        <label for="nachricht">Meine Nachricht:</label>
+        <textarea id="nachricht" name="nachricht" rows="4" maxlength="10000" required></textarea>
 
-          <div class="datenschutz">
-            <input
-              type="checkbox"
-              id="datenschutz"
-              name="datenschutz"
-              required
-            />
-            <label for="datenschutz">Ich erkläre mich einverstanden...</label>
-          </div>
+        <div class="datenschutz">
+          <input type="checkbox" id="datenschutz" name="datenschutz" required />
+          <label for="datenschutz">Ich erkläre mich einverstanden...</label>
+        </div>
 
-          <button type="submit">Senden</button>
-        </form>
+        <button type="submit">Senden</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <a href="impressum.html">Impressum</a>
+      <p>© 2024 Poetry Slam Nordhessen. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/PoetrySlamNordhessen/" aria-label="Facebook" target="_blank"><img src="img/logos/Facebook-f_Logo-Blue-Logo.wine.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/poetryslam_nordhessen/" aria-label="Instagram" target="_blank"><img src="img/logos/Instagram-Glyph-Color-Logo.wine.svg" alt="Instagram" /></a>
       </div>
-    </main>
-    <script src="./script.js"></script>
-  </body>
+      <button onclick="smoothScrollTop()" id="scrollTopButton" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
