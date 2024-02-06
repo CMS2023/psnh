@@ -4,103 +4,364 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalender</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <img class="banner" src="./PSNH.png" alt="Banner Poetry Slam" />
-    <div id="navbar">
-      <div id="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <header>
+      <img class="banner" src="img/logos/PSNH.png" alt="Banner Poetry Slam" />
+      <div id="navbar">
+        <div id="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </div>
-    </div>
-    <nav class="sliding-menu" id="sliding-menu">
-      <div class="image-container" id="image-container">
-        <a href="index.html">Startseite</a>
-      </div>
-      <div class="image-container">
-        <a href="slams.html">Slams</a>
-      </div>
-      <div class="image-container">
-        <a class="active" href="calendar.html">Terminkalender</a>
-      </div>
-      <div class="image-container">
-        <a href="workshops.html">Workshops</a>
-      </div>
-      <div class="image-container">
-        <a href="awareness.html">Awareness</a>
-      </div>
-      <div class="image-container">
-        <a href="contact.html">Kontakt</a>
-      </div>
-      <div class="image-container">
-        <a href="impressum.html">Impressum</a>
-      </div>
-    </nav>
-    <hr />
+      <nav class="sliding-menu" id="sliding-menu">
+        <div class="image-container" id="image-container">
+          <a href="index.html">Startseite</a>
+        </div>
+        <div class="image-container">
+          <a href="slams.html">Slams</a>
+        </div>
+        <div class="image-container">
+          <a class="active" href="calendar.html">Kalender</a>
+        </div>
+        <div class="image-container">
+          <a href="workshops.html">Workshops</a>
+        </div>
+        <div class="image-container">
+          <a href="awareness.html">Awareness</a>
+        </div>
+        <div class="image-container">
+          <a href="contact.html">Kontakt</a>
+        </div>
+        <div class="image-container">
+          <a href="impressum.html">Impressum</a>
+        </div>
+      </nav>
+      <hr />
+    </header>
     <main>
       <h1>Kalender</h1>
       <div class="calendar-list">
         <div class="calendar-event">
           <div class="calendar-date">
-            <span>14</span>
-            <span>DEZ</span>
+            <span>24</span>
+            <span>FEB</span>
           </div>
           <div class="calendar-details">
-            <h2>Poetry Slam Champions Gießen</h2>
-            <p>Stadttheater Gießen, Südanlage 1, Gießen, 35390</p>
-            <a href="#">Find out more</a>
+            <h2>Salzmannslam</h2>
+            <p>Einlass: 19:00 Uhr | Beginn: 19:30 Uhr</p>
+            <p>
+              Ort: Ersatzspielstätte der Kulturfabrik Salzmann, Leipziger Straße
+              407, 34123 Kassel
+            </p>
+            <a href="slams.html#salzmann">Zum Slam</a>
           </div>
           <div class="calendar-image">
-            <img src="./PSNH.png" alt="Poetry Slam Champions Gießen" />
+            <img src="img/logos/PSNH.png" alt="Salzmannslam" />
           </div>
         </div>
         <div class="calendar-event">
           <div class="calendar-date">
-            <span>14</span>
-            <span>DEZ</span>
+            <span>16</span>
+            <span>MÄR</span>
           </div>
           <div class="calendar-details">
-            <h2>Poetry Slam Champions Gießen</h2>
-            <p>Stadttheater Gießen, Südanlage 1, Gießen, 35390</p>
-            <a href="#">Find out more</a>
+            <h2>Bauna Slam #38</h2>
+            <p>Einlass: 18:30 Uhr | Beginn: 19:00 Uhr</p>
+            <p>Ort: Second Home, Friedrich-Ebert-Allee 20, 34225 Baunatal</p>
+            <a href="slams.html#bauna-slam">Zum Slam</a>
           </div>
           <div class="calendar-image">
-            <img src="./PSNH.png" alt="Poetry Slam Champions Gießen" />
+            <img src="img/logos/PSNH.png" alt="Bauna Slam #38" />
           </div>
         </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>23</span>
+            <span>MÄR</span>
+          </div>
+          <div class="calendar-details">
+            <h2>Cassel Slam</h2>
+            <p>Einlass: 19:00 Uhr | Beginn: 19:30 Uhr</p>
+            <p>Ort: CROSS jugendkulturkirche, Lutherplatz 9, 34117 Kassel</p>
+            <a href="slams.html#cassel">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img src="img/logos/PSNH.png" alt="Cassel Slam" />
+          </div>
+        </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>20</span>
+            <span>APR</span>
+          </div>
+          <div class="calendar-details">
+            <h2>Salzmannslam gegen Rechts</h2>
+            <p>Einlass: 19:00 Uhr | Beginn: 19:30 Uhr</p>
+            <p>
+              Ort: Ersatzspielstätte der Kulturfabrik Salzmann, Leipziger Straße
+              407, 34123 Kassel
+            </p>
+            <a href="slams.html#salzmann">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img src="img/logos/PSNH.png" alt="Salzmannslam gegen Rechts" />
+          </div>
+        </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>07</span>
+            <span>JUN</span>
+          </div>
+          <div class="calendar-details">
+            <h2>S(lammal)anders: Regiobattle Nordhessen vs. OWL</h2>
+            <p>Einlass: 19:30 Uhr | Beginn: 20:00 Uhr</p>
+            <p>
+              Ort: Subterrain im Sandershaus, Sandershäuser Straße 79, 34123
+              Kassel
+            </p>
+            <a href="slams.html#malanders">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img
+              src="img/logos/PSNH.png"
+              alt="S(lammal)anders: Regiobattle Nordhessen vs. OWL"
+            />
+          </div>
+        </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>08</span>
+            <span>JUN</span>
+          </div>
+          <div class="calendar-details">
+            <h2>Bauna Slam #39</h2>
+            <p>Einlass: 18:30 Uhr | Beginn: 19:00 Uhr</p>
+            <p>Ort: Second Home, Friedrich-Ebert-Allee 20, 34225 Baunatal</p>
+            <a href="slams.html#bauna-slam">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img src="img/logos/PSNH.png" alt="Bauna Slam #39" />
+          </div>
+        </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>22</span>
+            <span>JUN</span>
+          </div>
+          <div class="calendar-details">
+            <h2>Salzmannslam Queer Edition</h2>
+            <p>Einlass: 19:00 Uhr | Beginn: 19:30 Uhr</p>
+            <p>
+              Ort: Ersatzspielstätte der Kulturfabrik Salzmann, Leipziger Straße
+              407, 34123 Kassel
+            </p>
+            <a href="slams.html#salzmann">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img src="img/logos/PSNH.png" alt="Salzmannslam Queer Edition" />
+          </div>
+        </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>29</span>
+            <span>JUN</span>
+          </div>
+          <div class="calendar-details">
+            <h2>Cassel Slam</h2>
+            <p>Einlass: 19:00 Uhr | Beginn: 19:30 Uhr</p>
+            <p>Ort: CROSS jugendkulturkirche, Lutherplatz 9, 34117 Kassel</p>
+            <a href="slams.html#cassel">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img src="img/logos/PSNH.png" alt="Cassel Slam" />
+          </div>
+        </div>
+
         <div class="calendar-event">
           <div class="calendar-date">
             <span>14</span>
-            <span>DEZ</span>
+            <span>SEP</span>
           </div>
           <div class="calendar-details">
-            <h2>Poetry Slam Champions Gießen</h2>
-            <p>Stadttheater Gießen, Südanlage 1, Gießen, 35390</p>
-            <a href="#">Find out more</a>
+            <h2>Bauna Slam #40</h2>
+            <p>Einlass: 18:30 Uhr | Beginn: 19:00 Uhr</p>
+            <p>Ort: Second Home, Friedrich-Ebert-Allee 20, 34225 Baunatal</p>
+            <a href="slams.html#bauna-slam">Zum Slam</a>
           </div>
           <div class="calendar-image">
-            <img src="./PSNH.png" alt="Poetry Slam Champions Gießen" />
+            <img src="img/logos/PSNH.png" alt="Bauna Slam #40" />
           </div>
         </div>
+
         <div class="calendar-event">
           <div class="calendar-date">
-            <span>14</span>
+            <span>28</span>
+            <span>SEP</span>
+          </div>
+          <div class="calendar-details">
+            <h2>Salzmannslam Rap Edition</h2>
+            <p>Einlass: 19:00 Uhr | Beginn: 19:30 Uhr</p>
+            <p>
+              Ort: Ersatzspielstätte der Kulturfabrik Salzmann, Leipziger Straße
+              407, 34123 Kassel
+            </p>
+            <a href="slams.html#salzmann">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img src="img/logos/PSNH.png" alt="Salzmannslam Rap Edition" />
+          </div>
+        </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>11</span>
+            <span>OKT</span>
+          </div>
+          <div class="calendar-details">
+            <h2>S(lammal)anders: Femme Slam</h2>
+            <p>Einlass: 19:30 Uhr | Beginn: 20:00 Uhr</p>
+            <p>
+              Ort: Subterrain im Sandershaus, Sandershäuser Straße 79, 34123
+              Kassel
+            </p>
+            <a href="slams.html#malanders">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img src="img/logos/PSNH.png" alt="S(lammal)anders: Femme Slam" />
+          </div>
+        </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>09</span>
+            <span>NOV</span>
+          </div>
+          <div class="calendar-details">
+            <h2>Cassel Slam</h2>
+            <p>Einlass: 19:00 Uhr | Beginn: 19:30 Uhr</p>
+            <p>Ort: CROSS jugendkulturkirche, Lutherplatz 9, 34117 Kassel</p>
+            <p>Spende</p>
+            <a href="slams.html#cassel">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img src="img/logos/PSNH.png" alt="Cassel Slam" />
+          </div>
+        </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>23</span>
+            <span>NOV</span>
+          </div>
+          <div class="calendar-details">
+            <h2>Salzmannslam Best Of Nordhessen</h2>
+            <p>Einlass: 19:00 Uhr | Beginn: 19:30 Uhr</p>
+            <p>
+              Ort: Ersatzspielstätte der Kulturfabrik Salzmann, Leipziger Straße
+              407, 34123 Kassel
+            </p>
+            <a href="slams.html#salzmann">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img
+              src="img/logos/PSNH.png"
+              alt="Salzmannslam Best Of Nordhessen"
+            />
+          </div>
+        </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>07</span>
             <span>DEZ</span>
           </div>
           <div class="calendar-details">
-            <h2>Poetry Slam Champions Gießen</h2>
-            <p>Stadttheater Gießen, Südanlage 1, Gießen, 35390</p>
-            <a href="#">Find out more</a>
+            <h2>Bauna Slam #41</h2>
+            <p>Einlass: 18:30 Uhr | Beginn: 19:00 Uhr</p>
+            <p>Ort: Second Home, Friedrich-Ebert-Allee 20, 34225 Baunatal</p>
+            <a href="slams.html#bauna-slam">Zum Slam</a>
           </div>
           <div class="calendar-image">
-            <img src="./PSNH.png" alt="Poetry Slam Champions Gießen" />
+            <img
+              src="img/logos/PSNH.png"
+              alt="Salzmannslam Best Of Nordhessen"
+            />
+          </div>
+        </div>
+
+        <div class="calendar-event">
+          <div class="calendar-date">
+            <span>13</span>
+            <span>DEZ</span>
+          </div>
+          <div class="calendar-details">
+            <h2>S(lammal)anders: Punk Slam</h2>
+            <p>Einlass: 19:30 Uhr | Beginn: 20:00 Uhr</p>
+            <p>
+              Ort: Subterrain im Sandershaus, Sandershäuser Straße 79, 34123
+              Kassel
+            </p>
+            <a href="slams.html#malanders">Zum Slam</a>
+          </div>
+          <div class="calendar-image">
+            <img src="img/logos/PSNH.png" alt="S(lammal)anders: Punk Slam" />
           </div>
         </div>
       </div>
     </main>
-    <script src="./script.js"></script>
+    <footer>
+      <div class="footer-content">
+        <a href="impressum.html">Impressum</a>
+        <p>© 2024 Poetry Slam Nordhessen. All Rights Reserved.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/PoetrySlamNordhessen/"
+            aria-label="Facebook"
+            target="_blank"
+            ><img
+              src="img/logos/Facebook-f_Logo-Blue-Logo.wine.svg"
+              alt="Facebook"
+          /></a>
+          <a
+            href="https://www.instagram.com/poetryslam_nordhessen/"
+            aria-label="Instagram"
+            target="_blank"
+            ><img
+              src="img/logos/Instagram-Glyph-Color-Logo.wine.svg"
+              alt="Instagram"
+          /></a>
+        </div>
+        <button
+          onclick="smoothScrollTop()"
+          id="scrollTopButton"
+          title="Go to top"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
